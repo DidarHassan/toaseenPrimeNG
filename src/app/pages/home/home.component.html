@@ -1,0 +1,58 @@
+<main class="mainWrppr">
+    <section class="landingWrppr">
+        <div class="bannerSliders">
+            <swiper-container>
+                @for (sliders of bannerSliders; track $index) {
+                <swiper-slide>
+                    <div class="grid align-items-center">
+                        <div class="col-12 md:col-6 lg:col-6">
+                            <div class="bannerLeftContent">
+                                <div class="grid">
+                                    <div class="col-8 col-offset-2">
+                                        <div class="card flex justify-content-center my-3">
+                                            <p-card [header]="sliders.title">
+                                                <p class="my-3">
+                                                    <span>{{sliders.subtitle}}</span>
+                                                </p>
+                                                <p-card-content>
+                                                    <span>{{sliders.description}}</span>
+                                                </p-card-content>
+                                            </p-card>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                        <div class="col-12 md:col-6 lg:col-6">
+                            <div class="bannerRightContent">
+                                <img [src]="sliders.imgUrl" alt="" class="w-full bannerSlidersImg">
+                            </div>
+                        </div>
+                    </div>
+                </swiper-slide>
+                }
+            </swiper-container>
+        </div>
+    </section>
+    <section class="categoryWrppr">
+        <div class="categorySlider container">
+            <swiper-container  loop="ture" navigation="true" [slidesPerView]="slidesPerView">
+                @for (category of getCategory; track $index) {
+                <swiper-slide>
+                    <div class="text-center p-3 ">
+                        <p-card header="Advanced Card" subheader="Card Subheader">
+                            <ng-template pTemplate="header">
+                                <img class="w-4 categoryImg" alt="Card" [src]="category.imgUrl" />
+                            </ng-template>
+                        </p-card>
+                    </div>
+                </swiper-slide>
+                }
+            </swiper-container>
+            
+        </div>
+    </section>
+</main>

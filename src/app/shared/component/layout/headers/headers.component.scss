@@ -1,0 +1,30 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: transparent;
+    transition-duration: 0.5s;
+    height: 80px;
+    z-index: 10000;
+
+    ::ng-deep.p-menubar {
+        border: none;
+        background-color: transparent;
+        color: #ffff;
+    }
+    ::ng-deep.p-menubar .p-menuitem > .p-menuitem-content .p-menuitem-link .p-menuitem-text{
+        color: #ffff;
+        transition: 0.3s all;
+    }
+    ::ng-deep.p-menubar .p-menuitem:not(.p-highlight):not(.p-disabled) > .p-menuitem-content:hover {
+        background: #5b246c;
+        transition: 0.3s all;
+    }
+    
+}
+.shrink{
+    height: 56px;
+    background-color: rgb(150 99 168 / 46%);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
